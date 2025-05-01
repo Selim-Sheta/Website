@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import AnimatedBackground from './components/AnimatedBackground';
 import Header from './components/Header';
+import { Github, Linkedin } from 'lucide-react';
+import Footer from './components/Footer';
 
 export default function Home() {
     return (
@@ -19,8 +21,8 @@ export default function Home() {
                     </Link>
                 </section>
 
-                {/* Footer with Videos */}
-                <footer className="border-t p-6 flex flex-col items-center justify-center">
+                {/* Videos */}
+                <section className="border-t p-6 flex flex-col items-center justify-center">
                     <p className="text-xl mb-2">
                         Latest Post
                     </p>
@@ -33,7 +35,8 @@ export default function Home() {
                             className="w-full h-full rounded-md shadow-md"
                         ></iframe>
                     </div>
-                </footer>
+                </section>
+                <Footer />
             </main>
         </div>
     );

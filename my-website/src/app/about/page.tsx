@@ -2,11 +2,12 @@
 import Link from 'next/link';
 import AnimatedBackground from '../components/AnimatedBackground';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 export default function Page() {
     return (
         <div className="relative min-h-screen overflow-hidden">
-            <AnimatedBackground />
+            <AnimatedBackground animate={false} />
             <main className="relative z-0 flex flex-col min-h-screen bg-center bg-no-repeat bg-cover" >
                 <Header />
                 {/* Hero Section */}
@@ -34,22 +35,7 @@ export default function Page() {
                         Get In Touch
                     </Link>
                 </section>
-
-                {/* Footer with Videos */}
-                <footer className="border-t p-6 flex flex-col items-center justify-center">
-                    <p className="text-xl mb-2">
-                        Latest Content
-                    </p>
-                    <div className="w-full max-w-xl aspect-video">
-                        <iframe
-                            src="https://www.youtube.com/embed/c_93Iqw4kmk?si=xhiP30Fv2cPcTSaT"
-                            title="YouTube video"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                            className="w-full h-full rounded-md shadow-md"
-                        ></iframe>
-                    </div>
-                </footer>
+                <Footer/>
             </main>
         </div>
     );
