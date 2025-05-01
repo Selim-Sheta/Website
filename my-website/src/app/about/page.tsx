@@ -29,7 +29,7 @@ export default function Page() {
                         audio synthesis, creative effects, frequency-domain processing, and binaural audio. <br/>
                         My main tools include C++ (JUCE, MAX MSP, Unreal Engine), Matlab, JavaScript (Frontend, Web Audio API), C# (Unity), and Python — and I'm always learning more. <br/><br/>
                         I'm fluent in English and French, and I'm currently learning Spanish.<br/>
-                        Finally, I'm addicted to Chess. <a href="https://link.chess.com/friend/5SGeOR" target="_blank" rel="noopener noreferrer" className="text-[#ff8800] underline">Add me on chess.com!</a>
+                        Finally, I'm addicted to Chess. <a className="link-style" href="https://link.chess.com/friend/5SGeOR" target="_blank" rel="noopener noreferrer">Add me on chess.com!</a>
                         </p>
                     <Link href="/contact" className="bg-black text-white px-6 py-3 rounded-md hover:bg-gray-800">
                         Get In Touch

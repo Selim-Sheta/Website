@@ -3,6 +3,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --theme-color-1: #fe5e75;
+  --theme-color-2: #844a52;
+  --theme-color-3: #96c2ea;
+  --theme-color-4: #7caeec;
 }
 
 @theme inline {
@@ -26,6 +30,17 @@ body {
 }
 
 a.link-style {
-    @apply text-blue-500 underline hover:text-blue-700 transition-colors;
-  }
-  
+    color: var(--theme-color-3);
+}
+
+a.link-style:visited {
+    color: var(--theme-color-3);
+}
+
+a.link-style:hover {
+    color: var(--theme-color-1);
+}
+
+a.link-style:active {
+    color: var(--theme-color-1);
+}
