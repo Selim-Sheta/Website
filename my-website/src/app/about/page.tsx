@@ -35,6 +35,19 @@ export default function Page() {
                         Get In Touch
                     </Link>
                 </section>
+                {/* Videos */}
+                <section className="p-6 flex flex-col items-center justify-center bg-black/70">
+                    <p className="text-xl mb-2">Latest Post</p>
+                    <div className="w-full max-w-xl aspect-video">
+                        <iframe
+                            src="https://www.youtube.com/embed/c_93Iqw4kmk?si=xhiP30Fv2cPcTSaT"
+                            title="YouTube video"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                            className="w-full h-full rounded-md shadow-md"
+                        ></iframe>
+                    </div>
+                </section>
                 <Footer/>
             </main>
         </div>

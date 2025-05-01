@@ -18,7 +18,7 @@ export default function Header() {
     <nav className="flex justify-between items-center p-6 border-b">
       {/* Left: Home icon */}
       <div className="flex-1">
-        <Link href="/" className="hover:opacity-80">
+        <Link href="/" className="nav-style">
           <Home className="w-6 h-6" />
         </Link>
       </div>
@@ -29,7 +29,7 @@ export default function Header() {
           <Link
             key={name}
             href={href}
-            className={`hover:underline ${
+            className={`nav-style ${
               pathname === href ? 'font-semibold underline' : ''
             }`}
           >

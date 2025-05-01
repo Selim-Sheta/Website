@@ -29,18 +29,36 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-a.link-style {
-    color: var(--theme-color-3);
+* {
+    user-select: none;
 }
 
-a.link-style:visited {
-    color: var(--theme-color-3);
+p,
+input,
+textarea,
+select,
+[contenteditable="true"] {
+  user-select: text;
 }
 
-a.link-style:hover {
-    color: var(--theme-color-1);
+.link-style{
+    @apply text-[var(--theme-color-3)] hover:text-[var(--theme-color-1)] transition-colors;
 }
 
-a.link-style:active {
-    color: var(--theme-color-1);
+.nav-style {
+    @apply text-white hover:text-[var(--theme-color-1)] transition-colors;
+}
+
+@keyframes chroma-shift {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+.chroma {
+    background: linear-gradient(270deg, var(--theme-color-1), var(--theme-color-3), var(--theme-color-1));
+    background-size: 200% 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: chroma-shift 8s alternate ease-in-out infinite;
 }

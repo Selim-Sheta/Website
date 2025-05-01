@@ -1,4 +1,5 @@
-import { FaGithub, FaLinkedin, FaYoutube} from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaYoutube, FaEnvelope} from 'react-icons/fa';
+import Link from 'next/link';
 
 export default function Footer() {
     return (
@@ -7,7 +8,7 @@ export default function Footer() {
           href="https://github.com/Selim-Sheta"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-500 hover:text-black"
+          className="nav-style"
         >
           <FaGithub className="w-8 h-8" />
         </a>
@@ -15,7 +16,7 @@ export default function Footer() {
           href="https://www.linkedin.com/in/selim-sheta/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-500 hover:text-black"
+          className="nav-style"
         >
           <FaLinkedin className="w-8 h-8" />
         </a>
@@ -23,10 +24,13 @@ export default function Footer() {
           href="https://www.youtube.com/@mjrmls"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-500 hover:text-black"
+          className="nav-style"
         >
           < FaYoutube className="w-8 h-8" />
         </a>
+        <Link href="/contact" className="nav-style">
+            <FaEnvelope className="w-8 h-8" />
+        </Link>
         
       </footer>
     );
