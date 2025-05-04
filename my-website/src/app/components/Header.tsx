@@ -15,9 +15,9 @@ export default function Header() {
   ];
 
   return (
-    <nav className="flex justify-between items-center p-6 border-b">
+    <nav className="flex flex-col md:flex-row justify-between items-center p-6 border-b">
       {/* Left: Home icon */}
-      <div className="flex-1">
+      <div className="flex-1 pb-4 md:pb-0">
         <Link href="/" className="nav-style">
           <Home className="w-6 h-6" />
         </Link>
