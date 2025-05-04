@@ -74,7 +74,11 @@ select,
 }
 
 .split-layout {
-    @apply flex flex-col lg:flex-row-reverse items-start justify-center w-full lg:w-[80%] gap-8;
+    @apply flex flex-col lg:flex-row-reverse items-start justify-center w-full lg:w-[80%] gap-8 mb-10;
+}
+
+.split-layout-reverse {
+    @apply flex flex-col lg:flex-row items-start justify-center w-full lg:w-[80%] gap-8 mb-8;
 }
 
 .split-text {
@@ -92,3 +96,5 @@ select,
 svg {
     will-change: transform;
 }
+
+@custom-variant lg (@media (min-aspect-ratio: 4/3));
