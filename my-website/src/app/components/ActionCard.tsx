@@ -27,7 +27,7 @@ export default function ActionCard({ imageUrl, buttonLabel, buttonHref, descript
       </Link>
 
       {/* Description in bottom-left */}
-      <div className="absolute bottom-2 left-4 text-xs text-white">
+      <div className="absolute bottom-2 left-4 text-[0.5rem] md:text-xs text-white">
         {description}
       </div>
     </div>
