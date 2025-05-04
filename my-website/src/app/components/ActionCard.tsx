@@ -18,7 +18,7 @@ export default function ActionCard({ imageUrl, buttonLabel, buttonHref, descript
     />
 
     {/* Overlay on bottom third */}
-    <div className="absolute bottom-0 left-0 w-full h-1/4 bg-[var(--theme-color-3)]/80 flex items-center justify-center">
+    <div className="absolute bottom-0 left-0 w-full h-1/3 md:h-1/4 bg-[var(--theme-color-3)]/80 flex items-center justify-center">
       <Link
         href={buttonHref}
         className="bg-black text-white px-6 py-2 md:py-3 rounded-md hover:bg-gray-800 z-10"
