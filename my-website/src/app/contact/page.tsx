@@ -32,7 +32,7 @@ export default function ContactPage() {
                     </div>
                     <div className='split-image'>
                         <p className="text-sm">⠀</p>
-                        <p className="text-xl font-bold mb-4">My Availability</p>
+                        <p className="text-xl font-bold mb-4">Work Availability</p>
                         <Schedule scheduleData={data} />
                     </div>
                 </div>

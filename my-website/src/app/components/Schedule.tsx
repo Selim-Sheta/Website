@@ -11,7 +11,7 @@ interface ScheduleData {
 const statusLabels: Record<Status, string> = {
   available: 'Available',
   partial: 'Partial',
-  booked: 'Booked',
+  booked: 'Unavailable',
 };
 
 const statusColors: Record<Status, string> = {
