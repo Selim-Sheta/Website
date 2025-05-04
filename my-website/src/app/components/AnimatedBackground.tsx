@@ -2,42 +2,43 @@
 
 import { useEffect, useRef } from 'react';
 
-export default function AnimatedBackground({ animate = true }: { animate?: boolean }) {
+type AnimationMode = 'regular' | 'alternate' | 'off';
+
+export default function AnimatedBackground({ mode = 'regular' }: { mode?: AnimationMode }) {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
 
-    // Clear any previous injected SVG
     container.innerHTML = '';
 
-    // Fetch and inject SVG
     fetch('/img/background.svg')
-      .then(res => res.text())
-      .then(svgText => {
+      .then((res) => res.text())
+      .then((svgText) => {
         const parser = new DOMParser();
         const svgDoc = parser.parseFromString(svgText, 'image/svg+xml');
         const svgEl = svgDoc.querySelector('svg');
 
         if (!svgEl) return;
 
-        // Ensure SVG fills the screen
         svgEl.setAttribute('width', '100%');
         svgEl.setAttribute('height', '100%');
         svgEl.setAttribute('preserveAspectRatio', 'xMidYMid slice');
 
         container.appendChild(svgEl);
 
-        if (!animate) return;
+        if (mode === 'off') return;
 
-        // Animate paths
         const paths = svgEl.querySelectorAll('path');
-        paths.forEach(path => {
+        paths.forEach((path) => {
           const dx = (Math.random() - 0.5) * 100;
           const dy = (Math.random() - 0.5) * 100;
           const rot = (Math.random() - 0.5) * 60;
-          const dur = 5;
+          const dur =
+            mode === 'alternate'
+              ? 15 + Math.random() * 45 // 15–60s
+              : 5; // default for regular
 
           path.animate(
             [
@@ -46,19 +47,20 @@ export default function AnimatedBackground({ animate = true }: { animate?: boole
             ],
             {
               duration: dur * 1000,
-              iterations: 1,
-              direction: 'reverse',
+              iterations: mode === 'alternate' ? Infinity : 1,
+              direction: mode === 'alternate' ? 'alternate' : 'reverse',
               easing: 'ease-in-out',
             }
           );
         });
       });
-  }, [animate]);
+  }, [mode]);
 
   return (
     <div
-      ref={containerRef}
-      className="fixed top-0 left-0 w-screen h-screen pointer-events-none -z-10 overflow-hidden"
+        ref={containerRef}
+        className="fixed top-0 left-0 w-screen h-screen pointer-events-none -z-10 overflow-hidden"
+        style={{ transform: 'translateZ(0)', WebkitTransform: 'translateZ(0)' }}
     />
   );
 }

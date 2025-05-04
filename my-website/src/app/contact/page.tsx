@@ -15,8 +15,8 @@ const data = {
   
 export default function ContactPage() {
     return (
-    <div className="relative min-h-screen overflow-hidden">
-        <AnimatedBackground />
+    <div className="relative min-h-screen">
+        <AnimatedBackground mode="off" />
         <main className="main-layout" >
             <Header />
             {/* Hero Section */}

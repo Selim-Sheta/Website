@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 
 export default function Page() {
     return (
-        <div className="relative min-h-screen overflow-hidden">
+        <div className="relative min-h-screen">
             <main className="main-layout" >
                 <Header />
                 {/* Hero Section */}

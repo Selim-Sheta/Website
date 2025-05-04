@@ -16,8 +16,8 @@ export default function Page() {
         }
     ];
     return (
-        <div className="relative min-h-screen overflow-hidden">
-            <AnimatedBackground animate={false} />
+        <div className="relative min-h-screen">
+            <AnimatedBackground mode="off" />
             <main className="main-layout" >
                 <Header />
                 {/* Hero Section */}

@@ -20,14 +20,13 @@
 }
 
 body {
-    background: var(--background);
+    background: var(--theme-color-4);
     color: var(--foreground);
     font-family: Arial, Helvetica, sans-serif;
 }
 
 * {
     user-select: none;
-    color-scheme: light;
     color: white;
 }
 
@@ -88,4 +87,8 @@ select,
 
 .text-body {
     @apply text-base lg:text-xl text-justify leading-relaxed mb-6;
+}
+
+svg {
+    will-change: transform;
 }

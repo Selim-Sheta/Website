@@ -38,8 +38,8 @@ export default function Page() {
     ];
 
     return (
-        <div className="relative min-h-screen overflow-hidden">
-            <AnimatedBackground animate={false} />
+        <div className="relative min-h-screen">
+            <AnimatedBackground mode="alternate" />
             <main className="main-layout" >
                 <Header />
                 {/* Hero Section */}
