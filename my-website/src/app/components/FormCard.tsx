@@ -19,7 +19,7 @@ export default function FormCard() {
         <p className="text-green-400">Thanks for reaching out! I’ll get back to you soon.</p>
       ) : (
         <form 
-            action="https://formspree.io/f/yourFormId"
+            action="https://formspree.io/f/mgvkabgp"
             method="POST" 
             className="space-y-4"
         >
