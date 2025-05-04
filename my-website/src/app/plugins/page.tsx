@@ -7,10 +7,10 @@ import Footer from '../components/Footer';
 export default function Page() {
     return (
         <div className="relative min-h-screen overflow-hidden">
-            <main className="relative z-0 flex flex-col min-h-screen bg-center bg-no-repeat bg-cover" >
+            <main className="main-layout" >
                 <Header />
                 {/* Hero Section */}
-                <section className="flex flex-col items-center justify-center flex-1 text-center p-12 bg-black/70">
+                <section className="main-section">
                     <h1 className="chroma text-5xl font-bold my-6 py-6">Coming Soon...</h1>
                 </section>
                 <Footer/>
