@@ -31,7 +31,8 @@ export default function Page() {
                                 I've been making electronic music for over 10 years, and I love to experiment with sound and creative computing.
                                 I graduated from London's Centre for Digital Music in 2020, and have since delivered real-world results across a wide range 
                                 of audio tech challenges — from designing reverbs used in major live shows to building custom audio plugins for 
-                                Unreal Engine, filing a patent, and presenting at the 2024 Audio Developer Conference. </p>
+                                Unreal Engine.
+                            </p>
                             <p className="text-body">
                                 My main focus is on designing, implementing, benchmarking, and refining real-time audio algorithms. 
                                 Whether you're facing a technical challenge or exploring new ideas, I can help:<br/>
@@ -58,25 +59,19 @@ export default function Page() {
                                 imageUrl="/img/candid-1.webp"
                                 buttonLabel="Get In Touch"
                                 buttonHref="/contact"
-                                description=""
+                                description="Digital Environment Research Institute launch at Queen Mary (March 2022)"
                             />
-                            <p className="p-4 mb-4 text-sm text-gray-300 text-left">
-                                Digital Environment Research Institute launch at Queen Mary (March 2022)
-                            </p>
+                            <p className="text-xl mt-8 mb-4">Latest Post</p>
+                            <div className="w-full aspect-video">
+                                <iframe
+                                    src="https://www.youtube.com/embed/c_93Iqw4kmk?si=xhiP30Fv2cPcTSaT"
+                                    title="YouTube video"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                    className="w-full h-full rounded-md shadow-md"
+                                ></iframe>
+                            </div>
                         </div>
-                    </div>
-                </section>
-                {/* Videos */}
-                <section className="p-6 flex flex-col items-center justify-center bg-black/70">
-                    <p className="text-xl mb-2">Latest Post</p>
-                    <div className="w-full max-w-xl aspect-video">
-                        <iframe
-                            src="https://www.youtube.com/embed/c_93Iqw4kmk?si=xhiP30Fv2cPcTSaT"
-                            title="YouTube video"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                            className="w-full h-full rounded-md shadow-md"
-                        ></iframe>
                     </div>
                 </section>
                 <Footer/>

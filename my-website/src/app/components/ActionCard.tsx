@@ -9,26 +9,28 @@ interface ActionCardProps {
 
 export default function ActionCard({ imageUrl, buttonLabel, buttonHref, description }: ActionCardProps) {
   return (
-    <div className="bg-black/60 rounded-lg overflow-hidden shadow-lg flex flex-col h-full">
-      {/* Image*/}
-      <div className="relative pb-8 w-full h-full">
-        <img
-          src={imageUrl}
-          alt={buttonLabel}
-          className="w-full h-full object-cover"
-        />
-      </div>
+    <div className="relative w-full overflow-hidden rounded-lg shadow-lg">
+    {/* Full image */}
+    <img
+      src={imageUrl}
+      alt={buttonLabel}
+      className="w-full h-full object-cover"
+    />
 
-      {/* Button */}
-      <div className="pb-8">
-        <Link
-          href={buttonHref}
-          className="bg-black text-white px-6 py-3 rounded-md hover:bg-gray-800 text-center"
-        >
-          {buttonLabel}
-        </Link>
+    {/* Overlay on bottom third */}
+    <div className="absolute bottom-0 left-0 w-full h-1/4 bg-[var(--theme-color-3)]/80 flex items-center justify-center">
+      <Link
+        href={buttonHref}
+        className="bg-black text-white px-6 py-2 md:py-3 rounded-md hover:bg-gray-800 z-10"
+      >
+        {buttonLabel}
+      </Link>
+
+      {/* Description in bottom-left */}
+      <div className="absolute bottom-2 left-4 text-xs text-white">
+        {description}
       </div>
     </div>
-    
+  </div>
   );
 }
