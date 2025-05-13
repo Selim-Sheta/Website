@@ -1,14 +1,36 @@
+'use client';
 import { ExternalLink } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 interface ExperimentCardProps {
-  title: string;
-  description: string;
-  date: string;
-  imageUrl: string;
-  link: string;
+    title: string;
+    description: string;
+    date: string;
+    imageUrl: string;
+    link: string;
+    desktopOnly?: boolean;
 }
 
-export default function ExperimentCard({ title, description, date, imageUrl, link }: ExperimentCardProps) {
+export default function ExperimentCard({ title, description, date, imageUrl, link, desktopOnly = false }: ExperimentCardProps) {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const isTouch =
+            'ontouchstart' in window ||
+            navigator.maxTouchPoints > 0 ||
+            navigator.userAgent.toLowerCase().includes('mobile') ||
+            /android|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent);
+
+        setIsMobile(isTouch);
+    }, []);
+
+    const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+        if (desktopOnly && isMobile) {
+            e.preventDefault();
+            alert('This app is only supported on desktop.');
+        }
+    };
+
     return (
         <div className="bg-black/60 rounded-lg overflow-hidden shadow-lg relative group">
             {/* Thumbnail + overlay icon */}
@@ -16,6 +38,7 @@ export default function ExperimentCard({ title, description, date, imageUrl, lin
                 href={link}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={handleClick}
                 className="relative block cursor-pointer"
             >
             <img

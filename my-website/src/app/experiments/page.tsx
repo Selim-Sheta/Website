@@ -8,18 +8,18 @@ import ExperimentCard from '../components/ExperimentCard';
 export default function Page() {
     const experiments = [
         {
-          title: 'ChromaCheck [Coming soon]',
-          description: 'Three cats give you feedback on value, contrast, and colour harmony.',
-          date: 'Mar 2025',
-          imageUrl: '/img/exp-thumb-chroma.webp',
-          link: '',
+            title: 'ChromaCheck [Coming soon]',
+            description: 'Three cats give you feedback on value, contrast, and colour harmony.',
+            date: 'Mar 2025',
+            imageUrl: '/img/exp-thumb-chroma-temp.webp',
+            link: '',
         },
         {
-          title: 'Polyrhythm Maker',
-          description: 'Generate, preview and download complex polyrhythms.',
-          date: 'Apr 2024',
-          imageUrl: '/img/exp-thumb-polyrhythm.webp',
-          link: 'https://selim-sheta.github.io/PolyrhythmMaker/',
+            title: 'Polyrhythm Maker',
+            description: 'Generate, preview and download complex polyrhythms.',
+            date: 'Apr 2024',
+            imageUrl: '/img/exp-thumb-polyrhythm.webp',
+            link: 'https://selim-sheta.github.io/PolyrhythmMaker/',
         },
         {
             title: 'Circle',
@@ -27,6 +27,7 @@ export default function Page() {
             date: 'Jan 2020',
             imageUrl: '/img/exp-thumb-circle.webp',
             link: 'https://mjrmls-circle.glitch.me/',
+            desktopOnly: true,
         },
         {
             title: 'Underwater Synth',
@@ -34,6 +35,7 @@ export default function Page() {
             date: 'Jan 2020',
             imageUrl: '/img/exp-thumb-underwater.webp',
             link: 'https://mjrmls-water.glitch.me/',
+            desktopOnly: true,
         },
     ];
 
@@ -44,15 +46,18 @@ export default function Page() {
                 <Header />
                 {/* Hero Section */}
                 <section className="main-section">
+                    <p className="text-body">
+                        <b>My web experiments.</b>
+                    </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {
-                        experiments.map((exp) => (
-                        <ExperimentCard key={exp.title} {...exp} />
-                        ))
-                    }
+                        {
+                            experiments.map((exp) => (
+                                <ExperimentCard key={exp.title} {...exp} />
+                            ))
+                        }
                     </div>
                 </section>
-                <Footer/>
+                <Footer />
             </main>
         </div>
     );
