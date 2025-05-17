@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import AnimatedBackground from '../components/AnimatedBackground';
 import ActionCard from '../components/ActionCard';
+import { Download } from 'lucide-react';
 
 export default function Page() {
     const getInTouch = [
@@ -79,6 +80,13 @@ export default function Page() {
                             <br></br>
                                 Also, I'm addicted to Chess. <a className="link-style" href="https://link.chess.com/friend/5SGeOR" target="_blank" rel="noopener noreferrer">Add me on chess.com!</a>
                             </p>
+                            <br></br>
+                            <Link
+                                href="/Selim Sheta CV 2025.pdf"
+                                className="bg-black text-white px-6 py-2 md:py-3 rounded-md hover:bg-gray-800 z-10"
+                            >
+                                Download My CV
+                            </Link>
                         </div>
                         <div className='split-image'>
                             <div className="w-full aspect-video">
