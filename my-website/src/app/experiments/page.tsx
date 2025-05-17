@@ -8,6 +8,13 @@ import ExperimentCard from '../components/ExperimentCard';
 export default function Page() {
     const experiments = [
         {
+            title: 'AllPass Designer [Coming soon]',
+            description: 'Design all-pass filters by interacting with poles directly on the unit circle.',
+            date: 'May 2025',
+            imageUrl: '/img/exp-thumb-apd-temp.webp',
+            link: '',
+        },
+        {
             title: 'ChromaCheck [Coming soon]',
             description: 'Three cats give you feedback on value, contrast, and colour harmony.',
             date: 'Mar 2025',
